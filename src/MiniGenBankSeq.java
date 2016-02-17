@@ -6,7 +6,14 @@ public class MiniGenBankSeq {
 	private String definition;
 	private String source;
 	
+	public static void errorMessage(String entry) {
+		System.out.println("Warning!! The GenBank entry " + entry + " has not been initialized.");
+	}
+	
 	public String getLocus() {
+		if(locus == null) {
+			errorMessage("locus");
+		}
 		return locus;
 	}
 	
@@ -15,6 +22,9 @@ public class MiniGenBankSeq {
 	}
 	
 	public String getAccession() {
+		if(accession == null) {
+			errorMessage("accession");
+		}
 		return accession;
 	}
 	
@@ -23,6 +33,9 @@ public class MiniGenBankSeq {
 	}
 	
 	public String getDefinition() {
+		if(definition == null) {
+			errorMessage("definition");
+		}
 		return definition;
 	}
 	
@@ -31,6 +44,9 @@ public class MiniGenBankSeq {
 	}
 	
 	public String getSource() {
+		if(source == null) {
+			errorMessage("source");
+		}
 		return source;
 	}
 	
@@ -39,11 +55,12 @@ public class MiniGenBankSeq {
 	}
 	
 	MiniGenBankSeq() {
-		this("Locus not initialized.", "Locus not initialized.", "Locus not initialized.", "Locus not initialized.");
+		
 	}
 	
 	MiniGenBankSeq(String newLocus, String newAccession) {
-		this(newLocus, newAccession, "Locus not initialized.", "Locus not initialized.");
+		this.locus = newLocus;
+		this.accession = newAccession;
 	}
 	
 	MiniGenBankSeq(String newLocus, String newAccession, String newDefinition, String newSource) {
@@ -55,7 +72,7 @@ public class MiniGenBankSeq {
 	
 	@Override
 	public String toString() {
-		return "Contents: Locus: " + locus + " Accession: " + accession + " Definition: " + definition + " Source: " + source;
+		return "Contents: Locus: " + getLocus() + " Accession: " + getAccession() + " Definition: " + getDefinition() + " Source: " + getSource();
 	}
 	
 }
