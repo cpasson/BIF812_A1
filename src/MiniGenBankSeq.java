@@ -1,13 +1,30 @@
 
-public class MiniGenBankSeq {
 
+public class MiniGenBankSeq extends SequenceLoader{
+
+	/* Author: Natasha Passon
+	 * Student id: 034 645 150
+	 * Course: BIF812
+	 * Purpose: 
+	 * 
+	 * I declare that the attached assignment is my own work in accordance with Seneca Academic Policy. 
+	 * No part of this assignment has been copied manually or electronically from any other source 
+	 * (including websites) or distributed to other students.
+	 * 
+	 * Natasha Passon, 034 645 150
+	 */
+	
 	private String locus;
 	private String accession;
 	private String definition;
 	private String source;
 	
+	/** 
+	 * Method that is called when a getter method returns null value of GenBank entry
+	 * @param entry
+	 */
 	public static void errorMessage(String entry) {
-		System.out.println("Warning!! The GenBank entry " + entry + " has not been initialized.");
+		System.err.println("Warning!! The GenBank entry " + entry + " has not been initialized.");
 	}
 	
 	public String getLocus() {
@@ -54,15 +71,18 @@ public class MiniGenBankSeq {
 		source = newValue;
 	}
 	
+	// uninitialized constructor
 	MiniGenBankSeq() {
 		
 	}
 	
+	// partially initialized constructor
 	MiniGenBankSeq(String newLocus, String newAccession) {
 		this.locus = newLocus;
 		this.accession = newAccession;
 	}
 	
+	// fully initialized constructor
 	MiniGenBankSeq(String newLocus, String newAccession, String newDefinition, String newSource) {
 		this.locus = newLocus;
 		this.accession = newAccession;
@@ -74,5 +94,4 @@ public class MiniGenBankSeq {
 	public String toString() {
 		return "Contents: Locus: " + getLocus() + " Accession: " + getAccession() + " Definition: " + getDefinition() + " Source: " + getSource();
 	}
-	
 }
