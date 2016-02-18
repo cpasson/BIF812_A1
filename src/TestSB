@@ -4,8 +4,8 @@ public class TestSB {
 	public static void main(String[] args) {
 		 StringBuilderMiniGenBankSeq testSB = new StringBuilderMiniGenBankSeq();
 		 long nanoseconds = testSB.testConcatenate(100);
-		 double seconds = nanoseconds / (double)100000000;
-		 System.out.println("concatenating using StringBuilder took " + seconds + " seconds");
+		 double seconds = nanoseconds / (double)1000000000;
+		 System.out.println("concatenating using StringBuilder took " + seconds + " seconds");		
 	}
 
 }
