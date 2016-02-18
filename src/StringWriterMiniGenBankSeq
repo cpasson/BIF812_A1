@@ -1,0 +1,16 @@
+import java.io.StringWriter;
+
+public class StringWriterMiniGenBankSeq extends MiniGenBankSeq{
+
+	@Override
+	public void concatenate(String s, int times) {
+			StringWriter stringwrite = new StringWriter();
+			for(int i=0; i<times; i++) {
+				System.out.println("StringWriter is concantenating your sequence: concatenated "+ i + " of " +times + " times");
+				stringwrite.append(s);
+			}
+			sequence = stringwrite.toString();
+	}
+	
+
+}
