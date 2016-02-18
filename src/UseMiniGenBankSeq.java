@@ -1,11 +1,24 @@
 
+
 public class UseMiniGenBankSeq {
+	
+	/* Author: Natasha Passon
+	 * Student id: 034 645 150
+	 * Course: BIF812
+	 * Purpose: 
+	 * 
+	 * I declare that the attached assignment is my own work in accordance with Seneca Academic Policy. 
+	 * No part of this assignment has been copied manually or electronically from any other source 
+	 * (including websites) or distributed to other students.
+	 * 
+	 * Natasha Passon, 034 645 150
+	 */
 
 	public static void main(String[] args) {
 		
 		MiniGenBankSeq uninitialized = new MiniGenBankSeq();
 		
-		System.out.println("OUTPUT FOR UNUNITIALIZED CONSTRUCTOR: ");
+		System.out.println("OUTPUT FOR UNITIALIZED CONSTRUCTOR: ");
 		System.out.println(" ");
 		
 		System.out.println(uninitialized.toString());
@@ -50,4 +63,5 @@ public class UseMiniGenBankSeq {
 	}
 		
 }
+
 
